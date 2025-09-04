@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="256dp"
+        android:onClick="onButton2Clicked"
+        android:text="@string/press_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="64dp"
+        android:onClick="onButton5Clicked"
+        android:text="@string/map_button"
+        app:layout_constraintStart_toStartOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="92dp"
+        android:onClick="onButton4Clicked"
+        android:text="@string/dial_button"
+        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="36dp"
+        android:onClick="onButton3Clicked"
+        android:text="@string/web_button"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="29dp"
+        android:ems="10"
+        android:fontFamily="cursive"
+        android:inputType="text"
+        android:text="@string/welcome_to_cnit_355"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:inputType="text"
+        android:text="@string/go_boilermakers"
+        android:textAlignment="center"
+        android:textColorHighlight="#423030"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="13dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/myfirstapp"
+        android:textColor="#D03939"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

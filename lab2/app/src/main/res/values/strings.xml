@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">lab1</string>
+    <string name="website_button">Website</string>
+    <string name="dial_button">Dial</string>
+    <string name="press_button">Press</string>
+    <string name="web_button">Web</string>
+    <string name="dial_button2">Dial</string>
+    <string name="press_button2">Press</string>
+    <string name="map_button">Map</string>
+    <string name="welcome_to_cnit_355">Welcome to CNIT 355</string>
+    <string name="go_boilermakers">Go Boilermakers!</string>
+    <string name="myfirstapp">MyFirstAPP</string>
+</resources>
