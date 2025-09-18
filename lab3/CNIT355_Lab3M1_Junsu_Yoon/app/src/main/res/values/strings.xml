@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CNIT355_Lab3M1_Junsu_Yoon</string>
+    <string name="submit">SUBMIT</string>
+    <string name="please_enter_your_name_java">Please Enter your name [java]</string>
+    <string name="firstname_last_name_java">Firstname, Last name[java]</string>
+    <string name="junsu_yoon">Junsu Yoon</string>
+</resources>
