@@ -35,7 +35,6 @@
         android:id="@+id/editTextText"
         android:layout_width="0dp"
         android:layout_height="43dp"
-        android:ems="10"
         android:inputType="text"
         android:text="@string/firstname_last_name_java"
         android:textColor="#888484"
@@ -60,6 +59,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp"
         android:layout_marginStart="48dp"
-        android:layout_marginEnd="48dp"/>
+        android:layout_marginEnd="48dp"
+        android:onClick="onButtonClick"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

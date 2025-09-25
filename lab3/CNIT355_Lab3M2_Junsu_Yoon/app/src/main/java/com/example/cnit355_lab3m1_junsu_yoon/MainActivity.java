@@ -5,33 +5,24 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
+    private EditText editText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        // 시스템 바 인셋 처리
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        editText = findViewById(R.id.editTextText);
+        Button button = findViewById(R.id.button);
 
-        // 버튼과 EditText 객체 가져오기
-        Button submitButton = findViewById(R.id.button);
-        EditText editText = findViewById(R.id.editTextText);
+        editText.setText("Firstname Lastname");
+        editText.setTextColor(Color.GRAY);
 
-        // 버튼 클릭 이벤트
-        submitButton.setOnClickListener(v -> {
-            // 글자색을 완전 검은색으로 변경
+        button.setOnClickListener(v -> {
             editText.setTextColor(Color.BLACK);
         });
     }
