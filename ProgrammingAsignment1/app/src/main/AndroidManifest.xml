@@ -10,26 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProgrammingAsignment1">
 
-        <activity
-            android:name=".activity_tempreture"
-            android:exported="false" />
-
-        <activity
-            android:name=".activity_weight"
-            android:exported="false" />
-
-        <activity
-            android:name=".activity_length"
-            android:exported="false" />
-
+        <!-- 런처는 네 프로젝트 상황에 맞게 유지 -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
+        <!-- 길이 변환 화면 -->
+        <activity
+            android:name=".activity_length"
+            android:exported="false"/>
     </application>
 </manifest>

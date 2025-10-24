@@ -1,77 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#424242">
+    android:background="#FFFFFF"> <!-- ← 흰색 배경 -->
 
+    <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarHelp"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="#3F51B5"
-        app:title="Unit Converter v1.0"
-        app:titleTextColor="#FFFFFF" />
+        android:title="Unit Converter v1.0"
+        android:titleTextColor="#FFFFFF" />
 
-    <GridLayout
-        android:id="@+id/gridTabs"
+    <!-- 상단 탭 -->
+    <LinearLayout
+        android:id="@+id/topTabs"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:columnCount="4"
-        android:background="#5b4a3a"
-        android:padding="6dp">
+        android:layout_height="96dp"
+        android:orientation="horizontal"
+        android:background="#E0E0E0"
+        android:padding="6dp"
+        android:weightSum="4">
 
         <ImageView
             android:id="@+id/imageLength"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_columnWeight="1"
+            android:layout_weight="1"
             android:padding="8dp"
             android:clickable="true"
             android:focusable="true"
             android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
             android:src="@drawable/length" />
 
         <ImageView
             android:id="@+id/imageTemperature"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_columnWeight="1"
+            android:layout_weight="1"
             android:padding="8dp"
             android:clickable="true"
             android:focusable="true"
             android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
             android:src="@drawable/temperature" />
 
         <ImageView
             android:id="@+id/imageWeight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_columnWeight="1"
+            android:layout_weight="1"
             android:padding="8dp"
             android:clickable="true"
             android:focusable="true"
             android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
             android:src="@drawable/weight" />
 
         <ImageView
             android:id="@+id/imageHelp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_columnWeight="1"
+            android:layout_weight="1"
             android:padding="8dp"
             android:clickable="true"
             android:focusable="true"
             android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
             android:src="@drawable/help" />
-    </GridLayout>
+    </LinearLayout>
 
-    <!-- 입력 영역 -->
+    <!-- 입력 + 단위 선택 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -85,14 +83,15 @@
             android:layout_weight="1"
             android:hint="Enter value"
             android:inputType="numberDecimal"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#BBBBBB" />
+            android:textColor="#000000"
+            android:textColorHint="#888888" />
 
         <Spinner
             android:id="@+id/spFrom"
-            android:layout_width="120dp"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp" />
+            android:layout_marginStart="8dp"
+            android:spinnerMode="dropdown" />
     </LinearLayout>
 
     <!-- 결과 표 -->
@@ -104,7 +103,6 @@
         android:stretchColumns="0,1"
         android:padding="12dp">
 
-        <!-- 헤더 -->
         <TableRow>
             <TextView
                 android:layout_width="0dp"
@@ -112,7 +110,7 @@
                 android:layout_weight="1"
                 android:text="Value"
                 android:textStyle="bold"
-                android:textColor="#FFFFFF" />
+                android:textColor="#000000" />
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -120,8 +118,7 @@
                 android:text="Unit"
                 android:textStyle="bold"
                 android:gravity="end"
-                android:textColor="#FFFFFF" />
+                android:textColor="#000000" />
         </TableRow>
     </TableLayout>
-
 </LinearLayout>
