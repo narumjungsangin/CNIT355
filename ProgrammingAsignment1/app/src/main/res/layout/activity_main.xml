@@ -3,7 +3,10 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"> <!-- ← 흰색 배경 -->
+    android:background="#FFFFFF">
+
+    <!--Author: Junsu Yoon, Oct 24, CNIT 355-->
+    <!--Main page frontend-->
 
     <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar

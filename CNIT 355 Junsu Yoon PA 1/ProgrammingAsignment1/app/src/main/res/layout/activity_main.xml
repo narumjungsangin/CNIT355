@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!--Author: Junsu Yoon, Oct 24, CNIT 355-->
+    <!--Main page frontend-->
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarHelp"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#3F51B5"
+        android:title="Unit Converter v1.0"
+        android:titleTextColor="#FFFFFF" />
+
+    <!-- 상단 탭 -->
+    <LinearLayout
+        android:id="@+id/topTabs"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:orientation="horizontal"
+        android:background="#E0E0E0"
+        android:padding="6dp"
+        android:weightSum="4">
+
+        <ImageView
+            android:id="@+id/imageLength"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/length" />
+
+        <ImageView
+            android:id="@+id/imageTemperature"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/temperature" />
+
+        <ImageView
+            android:id="@+id/imageWeight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/weight" />
+
+        <ImageView
+            android:id="@+id/imageHelp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/help" />
+    </LinearLayout>
+
+    <!-- 입력 + 단위 선택 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <EditText
+            android:id="@+id/etInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter value"
+            android:inputType="numberDecimal"
+            android:textColor="#000000"
+            android:textColorHint="#888888" />
+
+        <Spinner
+            android:id="@+id/spFrom"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <!-- 결과 표 -->
+    <TableLayout
+        android:id="@+id/tableResults"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:stretchColumns="0,1"
+        android:padding="12dp">
+
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Value"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Unit"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:textColor="#000000" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

@@ -1,2 +1,0 @@
-# CNIT355
-Andriod

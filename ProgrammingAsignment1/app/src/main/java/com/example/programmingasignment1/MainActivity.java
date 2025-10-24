@@ -1,5 +1,7 @@
 package com.example.programmingasignment1;
-
+// Author: Junsu Yoon, Oct 24, CNIT 355
+//Backend for Main Form (Calculations)
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     // 길이(기준: m), 무게(기준: g)
     private final Map<String, Double> LENGTH_TO_M = new LinkedHashMap<>();
     private final Map<String, Double> WEIGHT_TO_G = new LinkedHashMap<>();
-    // 온도는 기준 맵이 아니라 단위 목록만 사용
+    // 온도 단위 배열
     private final String[] TEMP_UNITS = new String[]{"°C", "°F", "K"};
 
     @Override
@@ -67,13 +69,37 @@ public class MainActivity extends AppCompatActivity {
         imgLength.setOnClickListener(v -> setMode("length", imgLength));
         imgTemperature.setOnClickListener(v -> setMode("temperature", imgTemperature));
         imgWeight.setOnClickListener(v -> setMode("weight", imgWeight));
-        imgHelp.setOnClickListener(v -> setMode("help", imgHelp));
 
-        // 초기: Length
-        setMode("length", imgLength);
+        // Help 탭은 별도 Activity 이동 (activity_help.java)
+        imgHelp.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, activity_help.class);
+            startActivity(intent);
+        });
+
+        // ★ 초기 모드: Help에서 넘어온 인텐트의 "mode" 값 우선 적용
+        String modeFromIntent = getIntent().getStringExtra("mode");
+        if (modeFromIntent != null) {
+            switch (modeFromIntent) {
+                case "length":
+                    setMode("length", imgLength);
+                    break;
+                case "weight":
+                    setMode("weight", imgWeight);
+                    break;
+                case "temperature":
+                    setMode("temperature", imgTemperature);
+                    break;
+                default:
+                    setMode("length", imgLength);
+                    break;
+            }
+        } else {
+            // 기본: Length 모드
+            setMode("length", imgLength);
+        }
     }
 
-    /* ---------- 초기 데이터 ---------- */
+    /* ---------- 단위 초기화 ---------- */
     private void initUnitMaps() {
         // 길이 (1 unit = x m)
         LENGTH_TO_M.put("mm", 0.001);
@@ -91,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         WEIGHT_TO_G.put("kg", 1000.0);
         WEIGHT_TO_G.put("oz", 28.349523125);
         WEIGHT_TO_G.put("lb", 453.59237);
-        WEIGHT_TO_G.put("ton", 1_000_000.0); // metric ton (kg*1000)
+        WEIGHT_TO_G.put("ton", 1_000_000.0);
     }
 
     /* ---------- 모드 전환 ---------- */
@@ -99,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
         currentMode = mode;
         highlightTab(selectedTab);
 
-        // 스피너 항목 세팅 & 보이기/숨기기
+        // 스피너 항목 세팅 & 표시
         switch (currentMode) {
             case "length":
                 spFrom.setVisibility(View.VISIBLE);
@@ -113,9 +139,6 @@ public class MainActivity extends AppCompatActivity {
                 spFrom.setVisibility(View.VISIBLE);
                 setSpinnerItems(TEMP_UNITS, "°C");
                 break;
-            case "help":
-                spFrom.setVisibility(View.GONE); // 도움말에선 스피너 숨김
-                break;
         }
 
         updateResults();
@@ -128,7 +151,6 @@ public class MainActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spFrom.setAdapter(adapter);
 
-        // 기본 선택
         int defaultIdx = 0;
         for (int i = 0; i < items.length; i++) {
             if (items[i].equals(defaultUnit)) { defaultIdx = i; break; }
@@ -136,20 +158,12 @@ public class MainActivity extends AppCompatActivity {
         spFrom.setSelection(defaultIdx);
     }
 
-    /* ---------- 렌더링 ---------- */
+    /* ---------- 변환 결과 ---------- */
     private void updateResults() {
         if (tableResults == null) return;
 
-        // 헤더 제외 모두 삭제
         int count = tableResults.getChildCount();
         if (count > 1) tableResults.removeViews(1, count - 1);
-
-        if ("help".equals(currentMode)) {
-            addRow("Enter a number", "Input");
-            addRow("Pick a unit", "Spinner");
-            addRow("Tap tabs", "Length/Temp/Weight");
-            return;
-        }
 
         String text = etInput.getText().toString().trim();
         if (text.isEmpty()) return;
@@ -159,40 +173,32 @@ public class MainActivity extends AppCompatActivity {
         catch (NumberFormatException e) { return; }
 
         switch (currentMode) {
-            case "length":
-                renderLength(value);
-                break;
-            case "weight":
-                renderWeight(value);
-                break;
-            case "temperature":
-                renderTemperature(value);
-                break;
+            case "length": renderLength(value); break;
+            case "weight": renderWeight(value); break;
+            case "temperature": renderTemperature(value); break;
         }
     }
 
     private void renderLength(double value) {
         String from = (String) spFrom.getSelectedItem();
-        double fromFactor = LENGTH_TO_M.get(from); // 1 from = ? m
+        double fromFactor = LENGTH_TO_M.get(from);
         double inMeters = value * fromFactor;
 
         for (Map.Entry<String, Double> e : LENGTH_TO_M.entrySet()) {
             String unit = e.getKey();
-            double toFactor = e.getValue(); // 1 unit = ? m
-            double converted = inMeters / toFactor;
+            double converted = inMeters / e.getValue();
             addRow(fmt(converted), unit);
         }
     }
 
     private void renderWeight(double value) {
         String from = (String) spFrom.getSelectedItem();
-        double fromFactor = WEIGHT_TO_G.get(from); // 1 from = ? g
+        double fromFactor = WEIGHT_TO_G.get(from);
         double inGrams = value * fromFactor;
 
         for (Map.Entry<String, Double> e : WEIGHT_TO_G.entrySet()) {
             String unit = e.getKey();
-            double toFactor = e.getValue(); // 1 unit = ? g
-            double converted = inGrams / toFactor;
+            double converted = inGrams / e.getValue();
             addRow(fmt(converted), unit);
         }
     }
@@ -200,13 +206,12 @@ public class MainActivity extends AppCompatActivity {
     private void renderTemperature(double value) {
         String from = (String) spFrom.getSelectedItem();
 
-        // 입력값을 섭씨로 변환
         double celsius;
         switch (from) {
             case "°C": celsius = value; break;
             case "°F": celsius = (value - 32) * 5.0 / 9.0; break;
             case "K":  celsius = value - 273.15; break;
-            default:   celsius = value; // 방어
+            default:   celsius = value;
         }
 
         addRow(fmt2(celsius), "°C");
@@ -222,6 +227,7 @@ public class MainActivity extends AppCompatActivity {
         else
             return String.format(Locale.US, "%.4f", v);
     }
+
     private String fmt2(double v) {
         return String.format(Locale.US, "%.2f", v);
     }

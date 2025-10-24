@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CNIT355_Lab6M1_Junsu_Yoon</string>
+    <string name="junsu_yoon">Junsu Yoon</string>
+    <string name="what_is_your_name">What is your name?</string>
+    <string name="fav_color">What is your favorite color?</string>
+    <string name="submit">ASK QUESTIONS</string>
+    <string name="please_fill_both_fields">Please fill both fields.</string>
+    <string name="please_enter_your_name_java">Please enter your name.</string>
+
+    <!-- SecondActivity -->
+    <string name="second_title">Second Activity</string>
+    <string name="received_name">Name:</string>
+    <string name="received_color">Color:</string>
+    <string name="back_to_main">Back</string>
+
+    <string name="answer1_hint">Enter answer 1</string>
+    <string name="answer2_hint">Enter answer 2</string>
+    <string name="send_answers">Send Answers</string>
+
+</resources>
