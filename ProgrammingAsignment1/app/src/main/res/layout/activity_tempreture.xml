@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee">
+
+    <!-- 상단 툴바 -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#3F51B5"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Unit Converter v1.0" />
+
+    <!-- 4개 이미지 탭 -->
+    <GridLayout
+        android:id="@+id/gridTabs"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:columnCount="4"
+        android:background="#5b4a3a"
+        android:padding="6dp">
+
+        <ImageView
+            android:id="@+id/imageLength"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_columnWeight="1"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/length" />
+
+        <ImageView
+            android:id="@+id/imageTemperature"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_columnWeight="1"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/temperature" />
+
+        <ImageView
+            android:id="@+id/imageWeight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_columnWeight="1"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/weight" />
+
+        <ImageView
+            android:id="@+id/imageHelp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_columnWeight="1"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/help" />
+    </GridLayout>
+
+    <!-- 입력 행 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:background="#ffffff"
+        android:elevation="2dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etInput"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"
+            android:hint="Enter value"
+            android:textSize="18sp"
+            android:padding="8dp" />
+
+        <Spinner
+            android:id="@+id/spFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- ✅ TableLayout: 결과 표 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#dddddd">
+
+        <TableLayout
+            android:id="@+id/tableResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1"
+            android:padding="8dp"
+            android:background="#dddddd">
+
+            <!-- 표 헤더 -->
+            <TableRow
+                android:background="#ccc"
+                android:padding="6dp">
+                <TextView
+                    android:text="Value"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+                <TextView
+                    android:text="Unit"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+            </TableRow>
+
+            <!-- 예시 행 1 -->
+            <TableRow
+                android:padding="4dp"
+                android:background="#ffffff">
+                <TextView
+                    android:id="@+id/tvResultValue1"
+                    android:text="25.4"
+                    android:textColor="#ff7a00"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+                <TextView
+                    android:id="@+id/tvResultUnit1"
+                    android:text="mm"
+                    android:textColor="#444"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+            </TableRow>
+
+            <!-- 예시 행 2 -->
+            <TableRow
+                android:padding="4dp"
+                android:background="#ffffff">
+                <TextView
+                    android:id="@+id/tvResultValue2"
+                    android:text="0.0254"
+                    android:textColor="#ff7a00"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+                <TextView
+                    android:id="@+id/tvResultUnit2"
+                    android:text="m"
+                    android:textColor="#444"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>
