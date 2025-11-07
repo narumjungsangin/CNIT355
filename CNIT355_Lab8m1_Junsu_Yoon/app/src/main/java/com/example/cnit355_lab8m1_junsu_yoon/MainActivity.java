@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         btnPlay = findViewById(R.id.btnPlay);
         btnStop = findViewById(R.id.btnStop);
 
-        // 🎵 raw 폴더 안의 mp3 파일 이름 (확장자 빼고!)
         String[] musicList = {"music1", "music2","music3", "music4"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 this,
@@ -35,10 +34,8 @@ public class MainActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerMusic.setAdapter(adapter);
 
-        // Service 실행용 Intent
         serviceIntent = new Intent(this, MyService.class);
 
-        // ▶ Play 버튼
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // ⏹ Stop 버튼
         btnStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -28,23 +28,24 @@ public class MainActivity extends AppCompatActivity {
     private EditText etData;
     private Button btnWriteSDFile, btnReadSDFile, btnClear;
 
-    // 노트 참고: API 29+는 getExternalFilesDir, 하위는 Environment.getExternalStorageDirectory()
+    // 노트: API<29 vs API≥29 경로
     private String getMySdPath() {
         if (Build.VERSION.SDK_INT >= 29) {
-            File dir = getExternalFilesDir(null); // 앱 전용 외부 저장소
-            return dir != null ? dir.getAbsolutePath() : Environment.getExternalStorageDirectory().getAbsolutePath();
+            File dir = getExternalFilesDir(null); // 앱 전용 외부저장소(권장)
+            return (dir != null) ? dir.getAbsolutePath()
+                    : Environment.getExternalStorageDirectory().getAbsolutePath();
         } else {
             return Environment.getExternalStorageDirectory().getAbsolutePath();
         }
     }
 
+    // 노트: 퍼미션 요청 예시(28↓)
     private boolean ensurePermissionIfNeeded() {
-        if (Build.VERSION.SDK_INT >= 29) {
-            // scoped storage: 앱 전용 디렉토리 사용 시 퍼미션 불필요
-            return true;
-        }
-        boolean writeGranted = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
-        boolean readGranted = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+        if (Build.VERSION.SDK_INT >= 29) return true; // 10+는 앱 전용 폴더 쓰면 퍼미션 불필요
+        boolean writeGranted = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                == PackageManager.PERMISSION_GRANTED;
+        boolean readGranted = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
+                == PackageManager.PERMISSION_GRANTED;
         if (!writeGranted || !readGranted) {
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE},
@@ -70,24 +71,25 @@ public class MainActivity extends AppCompatActivity {
             if (!ensurePermissionIfNeeded()) return;
 
             String mySdPath = getMySdPath();
+
             try {
                 File dir = new File(mySdPath);
                 if (!dir.exists()) dir.mkdirs();
 
                 File myFile = new File(dir, FILE_NAME);
-                OutputStreamWriter myOutWriter = new OutputStreamWriter(new FileOutputStream(myFile));
-                myOutWriter.append(etData.getText());
+                OutputStreamWriter myOutWriter =
+                        new OutputStreamWriter(new FileOutputStream(myFile));myOutWriter.append(etData.getText());
                 myOutWriter.close();
 
-                Toast.makeText(getApplicationContext(),
-                        "Done writing SD '" + FILE_NAME + "'\n" + myFile.getAbsolutePath(),
+                Toast.makeText(getBaseContext(),
+                        "Done writing SD '" + FILE_NAME + "'",
                         Toast.LENGTH_SHORT).show();
             } catch (Exception e) {
-                Toast.makeText(getApplicationContext(), "Write error: " + e.getMessage(),
-                        Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 
+        // Read
         btnReadSDFile.setOnClickListener(v -> {
             if (!ensurePermissionIfNeeded()) return;
 
@@ -95,53 +97,34 @@ public class MainActivity extends AppCompatActivity {
             try {
                 File myFile = new File(mySdPath, FILE_NAME);
                 if (!myFile.exists()) {
-                    Toast.makeText(getApplicationContext(), "File not found: " + myFile.getAbsolutePath(),
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),
+                            "File not found: " + myFile.getAbsolutePath(), Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 BufferedReader myReader = new BufferedReader(
                         new InputStreamReader(new FileInputStream(myFile))
                 );
-
-                StringBuilder buf = new StringBuilder();
-                String line;
-                while ((line = myReader.readLine()) != null) {
-                    buf.append(line).append("\n");
+                String aDataRow;
+                StringBuilder aBuffer = new StringBuilder();
+                while ((aDataRow = myReader.readLine()) != null) {
+                    aBuffer.append(aDataRow).append("\n");
                 }
                 myReader.close();
-                etData.setText(buf.toString());
+
+                etData.setText(aBuffer.toString());
 
                 Toast.makeText(getApplicationContext(),
-                        "Done reading SD '" + FILE_NAME + "'",
-                        Toast.LENGTH_SHORT).show();
+                        "Done reading SD '" + FILE_NAME + "'", Toast.LENGTH_SHORT).show();
             } catch (Exception e) {
-                Toast.makeText(getApplicationContext(), "Read error: " + e.getMessage(),
+                Toast.makeText(getApplicationContext(), e.getMessage(),
                         Toast.LENGTH_SHORT).show();
             }
         });
 
+        // Clear
         btnClear.setOnClickListener(v -> etData.setText(""));
     }
 
-    // 퍼미션 결과 처리 (API 28↓)
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
-                                           @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == REQ_EXTERNAL) {
-            boolean granted = true;
-            for (int res : grantResults) {
-                if (res != PackageManager.PERMISSION_GRANTED) {
-                    granted = false;
-                    break;
-                }
-            }
-            if (!granted) {
-                Toast.makeText(this, "Storage permission denied.", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(this, "Storage permission granted.", Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
+
 }
