@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9ae142f5-2410-46ad-9f16-24af907cb549" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../CNIT355_Lab10m1_Junsu_Yoon/app/src/main/java/com/example/cnit355_lab10m1_junsu_yoon/DBHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CNIT355_Lab10m2_Junsu_Yoon/app/src/main/java/com/example/cnit355_lab10m2_junsu_yoon/DBHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CNIT355_Lab10m2_Junsu_Yoon/app/src/main/java/com/example/cnit355_lab10m2_junsu_yoon/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CNIT355_Lab10m2_Junsu_Yoon/app/src/main/java/com/example/cnit355_lab10m2_junsu_yoon/MyProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CNIT355_Lab10m2_Junsu_Yoon/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CNIT355_Lab9m1_Junsu_Yoon/app/src/main/java/com/example/cnit355_lab9m1_junsu_yoon/MyReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CNIT355_Lab9m1_Junsu_Yoon/app/src/main/java/com/example/cnit355_lab9m1_junsu_yoon/PlayMusic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CNIT355_Lab9m1_Junsu_Yoon/app/src/main/res/raw/music.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/.idea/AndroidProjectSystem.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/.idea/deploymentTargetSelector.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/.idea/migrations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/androidTest/java/com/example/cnit355_lab8m1_junsu_yoon/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/java/com/example/cnit355_lab8m1_junsu_yoon/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/java/com/example/cnit355_lab8m1_junsu_yoon/MyService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/mipmap-anydpi/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/raw/music1.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/raw/music2.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/raw/music3.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/raw/music4.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/raw/raw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/app/src/test/java/com/example/cnit355_lab8m1_junsu_yoon/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/gradle/libs.versions.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m1_Junsu_Yoon/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/.idea/AndroidProjectSystem.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/.idea/deploymentTargetSelector.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/.idea/deviceManager.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/.idea/migrations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/androidTest/java/com/example/cnit355_lab8m2_junsu_yoon/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/java/com/example/cnit355_lab8m2_junsu_yoon/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/mipmap-anydpi/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/app/src/test/java/com/example/cnit355_lab8m2_junsu_yoon/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/gradle/libs.versions.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CNIT355_Lab8m2_Junsu_Yoon/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/.idea/AndroidProjectSystem.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/.idea/deploymentTargetSelector.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/.idea/deviceManager.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/androidTest/java/com/example/programmingasignment1/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/java/com/example/programmingasignment1/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/java/com/example/programmingasignment1/activity_help.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/drawable/help.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/drawable/length.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/drawable/temperature.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/drawable/weight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/layout/activity_help.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/mipmap-anydpi/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/values/arrays.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/app/src/test/java/com/example/programmingasignment1/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/gradle/libs.versions.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgrammingAsignment1/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/AndroidProjectSystem.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/deploymentTargetSelector.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/migrations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/androidTest/java/com/example/test/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/java/com/example/test/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/mipmap-anydpi/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/app/src/test/java/com/example/test/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/gradle/libs.versions.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/settings.gradle.kts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="35ZudegX0nQFBP5EoJFeJwoMqFt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;
+  }
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9ae142f5-2410-46ad-9f16-24af907cb549" name="Changes" comment="" />
+      <created>1763330003941</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1763330003941</updated>
+    </task>
+    <servers />
+  </component>
+</project>
